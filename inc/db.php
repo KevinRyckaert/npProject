@@ -1,4 +1,11 @@
 <?php
-    $pdo = new PDO('mysql:dbname=npProject;host=localhoste', 'root', '');
-    $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $pdo -> setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+try
+{
+	// On se connecte à MySQL
+	$bdd = new PDO('mysql:host=localhost;dbname=npProject;charset=utf8', 'root', '');
+}
+catch(Exception $e)
+{
+	// En cas d'erreur, on affiche un message et on arrête tout
+        echo('Erreur : '.$e->getMessage());
+}

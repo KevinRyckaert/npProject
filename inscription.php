@@ -1,13 +1,6 @@
 <?php 
     require('inc/header.php');
-    require_once('inc/db.php');
 
-?>
-
-
-
-
-<?php
     if(!empty($_POST))
     {
         $errors=array();
@@ -15,6 +8,10 @@
         if(empty($_POST['formPseudo']) || !preg_match('/^[a-zA-Z0-9_]+$/', $_POST['formPseudo']))
         {
             $errors['formPseudo'] = "Votre Pseudo n'est pas valide.";
+        }
+        else
+        {
+
         }
 
         if(empty($_POST['formMail']) || !filter_var($_POST['formMail'], FILTER_VALIDATE_EMAIL))
@@ -28,8 +25,15 @@
         }
         debug($errors);
     }
-    
-    
+    if(empty($errors))
+    {
+        require_once('inc/db.php');
+        $req = $pdo -> prepare("INSERT INTO membre SET pseudo = ?, nom = ?, prenom = ?, email = ?, password = ?, ");
+        $password = password_hash($_POST['formPassword'],PASSWORD_BCRYPT);
+        $req-> execute($_POST['formPseudo'], $_POST['formNom'], $_POST['formPrenom'], $_POST['formMail'], $password);
+            die("Notre compte a bien été créé");
+    }
+
 ?>
 <form action="" method="post">
     <label for="">Pseudo</label>
