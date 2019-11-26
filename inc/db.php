@@ -2,7 +2,8 @@
 try
 {
 	// On se connecte à MySQL
-	$bdd = new PDO('mysql:host=localhost;dbname=npProject;charset=utf8', 'root', '');
+	$bdd = new PDO('mysql:host=localhost;dbname=npProject', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ));
+	
 }
 catch(Exception $e)
 {
