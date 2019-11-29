@@ -1,4 +1,7 @@
-<?php require("inc/function.php")?>
+<?php 
+require_once("inc/function.php");
+require_once("inc/db.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,11 +29,12 @@
         <section class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <sectionv class="navbar-nav">
                 <a href="#" class="nav-item nav-link active">Acceuil</a>
-                <a href="#" class="nav-item nav-link">info</a>
+                <a href="inscription.php" class="nav-item nav-link active">S'inscrire</a>
+                <a href="connexion.php" class="nav-item nav-link active">Se connecter</a>
                 <section class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Profil</a>
+                    <a href="#" class="nav-link dropdown-toggle disabled" data-toggle="dropdown">Profil</a>
                     <section class="dropdown-menu">
-                        <a href="inscription.php" class="dropdown-item">Profil</a>
+                        <a href="#" class="dropdown-item">Profil</a>
                         <a href="#" class="dropdown-item">Paramétre</a>
                         <a href="#" class="dropdown-item">Déconnexion</a>
                     </section>
@@ -48,7 +52,7 @@
             <button type="button" class="btn btn-danger" href="inscription.php">S'inscrire</button>
             
             <section class="navbar-nav">
-            <button type="button" class="btn btn-danger" href="connexion">Se connecter</button>
+            <button type="button" class="btn btn-danger" action="connexion">Se connecter</button>
             </section>
         </section>
     </nav>
