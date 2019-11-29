@@ -14,7 +14,6 @@
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>npProject</title>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -31,7 +30,7 @@
                 <section class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Profil</a>
                     <section class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Profil</a>
+                        <a href="inscription.php" class="dropdown-item">Profil</a>
                         <a href="#" class="dropdown-item">Paramétre</a>
                         <a href="#" class="dropdown-item">Déconnexion</a>
                     </section>
@@ -46,10 +45,10 @@
                 </section>
             </form>
             <section class="navbar-nav">
-            <button type="button" class="btn btn-danger"><a href="inscription.php"></a>S'inscrire</button>
+            <button type="button" class="btn btn-danger" href="inscription.php">S'inscrire</button>
             
             <section class="navbar-nav">
-            <button type="button" class="btn btn-danger"><a href="connexion"></a>Se connecter</button>
+            <button type="button" class="btn btn-danger" href="connexion">Se connecter</button>
             </section>
         </section>
     </nav>
