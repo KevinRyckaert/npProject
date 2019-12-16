@@ -15,45 +15,38 @@ require_once("inc/db.php");
     <script src="https://kit.fontawesome.com/76bde60158.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
     <title>npProject</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-primary">
-        <a href="#" class="navbar-brand">npProject</a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">npProject Football</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <section class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-            <sectionv class="navbar-nav">
-                <a href="#" class="nav-item nav-link active">Acceuil</a>
-                <a href="inscription.php" class="nav-item nav-link active">S'inscrire</a>
-                <a href="connexion.php" class="nav-item nav-link active">Se connecter</a>
-                <section class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle disabled" data-toggle="dropdown">Profil</a>
-                    <section class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Profil</a>
-                        <a href="#" class="dropdown-item">Paramétre</a>
-                        <a href="#" class="dropdown-item">Déconnexion</a>
-                    </section>
-                </section>
-            </sectionv>
-            <form class="form-inline">
-                <section class="input-group">                    
-                    <input type="text" class="form-control" placeholder="Search">
-                    <section class="input-group-append">
-                        <button type="button" class="btn btn-danger"><i class="fa fa-search"></i></button>
-                    </section>
-                </section>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">               
+                    <a class="nav-link" href="#'><span class="sr-only"></span></a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Créer un article</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="connexion.php">Se connecter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="inscription.php">S'inscrire</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
-            <section class="navbar-nav">
-            <button type="button" class="btn btn-danger" href="inscription.php">S'inscrire</button>
-            
-            <section class="navbar-nav">
-            <button type="button" class="btn btn-danger" action="connexion">Se connecter</button>
-            </section>
-        </section>
+        </div>
     </nav>
     <section class="container">
